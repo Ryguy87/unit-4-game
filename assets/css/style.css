@@ -1,0 +1,19 @@
+/* Jumbotron headers */
+#header {
+    text-align: center;
+    line-height: .8;
+    font-weight: bold;
+}
+
+/* Game instructions */
+#intructionParagraph {
+    line-height: 1;
+    color: black;
+    text-align: center;
+}
+
+/* Buttons */
+.buttonsize {
+    max-height: 100px;
+    max-width: 100px;
+}

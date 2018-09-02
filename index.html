@@ -7,27 +7,97 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystals Collector game</title>
     <!-- reset.css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+
+
+    <!-- style.css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-    <h1>Crystals Collector</h1>
-    <div id="Instructions">
-        <p>You will be given a random number at the start of the game.</p>
-        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
-            total score.</p>
-        <p>You win the game by matching your total score to the random number. You lose the game if your total score
-            goes above the random number.</p>
-        <p>The value of each crystal is hidden from you until you click on it.</p>
-        <p>Each time the game starts, the game will change the value of each crystal.</p>
+    <!-- Container -->
+    <div class="container-fluid" id="mainBox">
+        <!-- Intrustions and game title -->
+        <div class="jumbotron">
+            <h1 class="display-3" id="header">Crystal Collector Game!</h1>
+            <h1 id="header">Intructions</h1>
+            <p class="lead" id="intructionParagraph">You will be given a random number at the start of the game.</p>
+            <p class="lead" id="intructionParagraph">There are four crystals below. By clicking on a crystal you will
+                add a
+                specific amount of points to your
+                total score.</p>
+            <p class="lead" id="intructionParagraph">You win the game by matching your total score to the random
+                number.
+                You lose the game if your total score
+                goes above the random number.</p>
+            <p class="lead" id="intructionParagraph">The value of each crystal is hidden from you until you click on
+                it.</p>
+            <p class="lead" id="intructionParagraph">Each time the game starts, the game will change the value of each
+                crystal.</p>
+
+        </div>
+        <!-- Tracking wins and losses -->
+        <div class="row" id="scoreSection">
+
+            <!-- spacer column -->
+            <div class="col-md-4"></div>
+
+            <!-- wins column -->
+            <div class="col-md-2" id="winSection">
+                <h3 class="text-center" id="wins">Wins: 0</h3>
+            </div>
+
+            <!-- losses column -->
+            <div class="col-md-2" id="lossSection">
+                <h3 class="text-center" id="losses">Losses: 0</h3>
+            </div>
+
+            <!-- spacer column -->
+            <div class="col-md-4"></div>
+
+        </div>
+        <!-- Game section -->
+        <div class="row" id="gameSection">
+            <!-- first column for random number -->
+            <div class="col-md-3" id="numberSection">
+                <h3 class="text-center" id="random">Match Number:</h3>
+                <h1 class="numberBox text-center" id="randomNumber">0</h1>
+            </div>
+
+            <!-- second column for buttons -->
+            <div class="col-md-6 text-center" id="buttonSection">
+
+                <!-- first crystal -->
+                <button><img src="assets/images/redcrystal.jpg" class="buttonsize"></button>
+
+                <!-- second crystal -->
+                <button><img src="assets/images/bluecrystal.jpg" class="buttonsize"></button>
+
+                <!-- third crystal -->
+                <button><img src="assets/images/yellowcrystal.jpg" class="buttonsize"></button>
+                <!-- fourth crystal -->
+                <button><img src="assets/images/greencrystal.jpg" class="buttonsize"></button>
+
+            </div>
+            <!-- third column for total points -->
+            <div class="col-md-3" id="totalPoints">
+                <h3 class="text-center" id="score">Your Total Score:</h3>
+                <h1 class="numberBox text-center" id="totalNumber">0</h1>
+            </div>
+
+
+
+        </div>
+
+
+
     </div>
-    <div>
-        <p>random number:</p><span id="random number"></span>
-    </div>
-    <div>
-        <p>Wins:</p>
-        <p>Losses:</p>
-    </div>
+
 
 </body>
 
